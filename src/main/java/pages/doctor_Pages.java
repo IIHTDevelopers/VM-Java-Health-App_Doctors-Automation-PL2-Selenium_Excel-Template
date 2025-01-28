@@ -13,7 +13,7 @@ public class doctor_Pages extends StartupPage {
 		super(driver);
 	}
 
-	/**@Test1
+	/**@Test1.1
 	 * about this method loginTohealthAppByGivenValidCredetial() 
 	 * @param : Map<String, String>
 	 * @description : fill usernameTextbox & passwordTextbox and click on sign in button
@@ -128,7 +128,7 @@ public class doctor_Pages extends StartupPage {
 	/**@Test8
 	 * about this method verifyTheErrorMessageInSearchProblemField() 
 	 * @param : null
-	 * @description : On the "Surgical History" Menu Tab of Problem module of the Profile "Sonia Gandhi", clicking on the "+Add New" button from Surgical History List and it will open a "Add Surgical History" form.
+	 * @description : On the "Surgical History" Menu Tab of Problem module, clicking on the "+Add New" button from Surgical History List and it will open a "Add Surgical History" form.
                       Then click on "Add" button of "Add Surgical History" form directly without filling any information, it will throw an error message in "Search Problem*" field. 
                       Then Validate that Error Message : Select ICD-11 Code
 	 * @return : String
@@ -142,9 +142,9 @@ public class doctor_Pages extends StartupPage {
 	/**@Test9
 	 * about this method performScrollingOpertaionAndVerifyTheSaveButtonIsPresent() 
 	 * @param : null
-	 * @description : On the Profile "Sonia Gandhi", Scroll to the "Discharge Summary" Module which is present in the left navigation.
+	 * @description : Scroll to the "Discharge Summary" Module which is present in the left navigation.
                       Click on "Discharge Summary" and it will navigate to the "DischargeSummary" page.
-                      Then scroll to the buttom of the page and verify that the "Save" button is present or not.
+                      Then scroll to the buttom of the page and verify that the "Update" button is present or not.
 	 * @return : Boolean
 	 * @author : Yaksha
 	 */
@@ -156,7 +156,7 @@ public class doctor_Pages extends StartupPage {
 	/**@Test10
 	 * about this method highlightElementInYellowColour() 
 	 * @param : null
-	 * @description : On the buttom of the "Discharge Summary" page of Profile "Sonia Gandhi", verify that the "Hospital Course" text area is present or not?
+	 * @description : On the buttom of the "Discharge Summary" page, verify that the "Hospital Course" text area is present or not?
                       If Present, then highlight the "Hospital Course" text area as color yellow 
 	 * @return : Boolean
 	 * @author : Yaksha
@@ -169,7 +169,7 @@ public class doctor_Pages extends StartupPage {
 	/**@Test11
 	 * about this method verifyThePlaceHolderNameOfTreatmentDuringHospitalStayTextarea() 
 	 * @param : null
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that, "Treatment During Hospital Stay" textarea is present or not?
+	 * @description : On the "Discharge Summary" page, verify that, "Treatment During Hospital Stay" textarea is present or not?
                       If Present, then get the placeholdername of "Treatment During Hospital Stay" textarea and Validate that placeholdername.
 	 * @return : String
 	 * @author : Yaksha
@@ -183,7 +183,7 @@ public class doctor_Pages extends StartupPage {
 	/**@Test12
 	 * about this method validateTheEnteredValueInConditionOnDischargeTextarea() 
 	 * @param : Map<String, String>
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that, "Condition On Discharge" textarea is present or not?
+	 * @description : On the "Discharge Summary" page, verify that, "Condition On Discharge" textarea is present or not?
                       If present, then send the value to the "Condition On Discharge" textarea. 
                       Then validate the entered value.
 	 * @return : String
@@ -196,7 +196,7 @@ public class doctor_Pages extends StartupPage {
 	/**@Test13
 	 * about this method verifyThatTheYesRadioButtonIsSelectedAndDeselect() 
 	 * @param : null
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", select "Yes" radio button from the "Show Result on Report" label and then verify that the "Yes" radio button is selected or not.
+	 * @description : On the "Discharge Summary" page, select "Yes" radio button from the "Show Result on Report" label and then verify that the "Yes" radio button is selected or not.
                       After validation, then deselect the "Yes" radio button from the "Show Result on Report" label 
 	 * @return : Boolean
 	 * @author : Yaksha
@@ -206,30 +206,30 @@ public class doctor_Pages extends StartupPage {
 	}
 
 	/**@Test14
-	 * about this method clickAndSendValueToThePendingReportsTextAreaUsingJavaScript() 
-	 * @param : Map<String, String>
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that the "Pending Reports" text area is present or not?
-                      If Present, then click & send value to the "Pending Reports" text area using the JavaScript
-	 * @return : Boolean
-	 * @author : Yaksha
-	 */
-	public Boolean clickAndSendValueToThePendingReportsTextAreaUsingJavaScript(Map<String, String> expectedData) throws Exception {
-		return false;
-	}
-
-	/**@Test15
 	 * about this method verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() 
 	 * @param : null
-	 * @description : On the "Discharge Summary" page of Profile "Sonia Gandhi", verify that the "Save" button is present or not?
-                      If present, then click on the save button directly without fill any information and it will throw a notification popup error message.
+	 * @description : On the "Discharge Summary" page, verify that the "Update" button is present or not?
+                      If present, then click on the Update button directly without fill any information and it will throw a notification popup error message.
                       Then validate that  notification popup error message 
                       Failed
-                      Enter Manditory fields
+                      Enter Mandatory fields
 	 * @return : String
 	 * @author : Yaksha
 	 */
 	public String verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() throws Exception {
 		return null;
+	}
+	
+	/**@Test15
+	 * about this method handleFileUpload() 
+	 * @param : Map<String, String>
+	 * @description : Upload a image in Scanned Images section.
+	 * @return : Boolean
+	 * @author : YAKSHA
+	 */
+	public Boolean handleFileUpload(String pathOfTheFile) throws Exception {
+		
+		return false;
 	}
 
 	

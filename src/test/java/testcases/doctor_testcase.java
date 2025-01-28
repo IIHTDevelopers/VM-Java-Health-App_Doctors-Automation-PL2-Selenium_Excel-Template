@@ -223,20 +223,6 @@ public class doctor_testcase extends AppTestBase {
 	}
 
 	@Test(priority = 14, groups = {
-			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that the \"Pending Reports\" text area is present or not?\r\n"
-					+ "If Present, then click & send value to the \"Pending Reports\" text area using the JavaScript")
-	public void performJavaScriptOperations() throws Exception {
-		doctor_PagesInstance = new doctor_Pages(driver);
-		locatorsFactoryInstance = new LocatorsFactory(driver);
-		Map<String, String> expectedData = new FileOperations().readExcelPOI(expectedDataFilePath, "TextFieldDatas");
-		Assert.assertTrue(
-				doctor_PagesInstance.clickAndSendValueToThePendingReportsTextAreaUsingJavaScript(expectedData),
-				"Unable to perform javascript operations, please check manually");
-		Assert.assertEquals(locatorsFactoryInstance.pendingReportsTextAreaValueIsPresent(),
-				expectedData.get("pendingReportsTextFieldData"), "Validation failed, Please check manually");
-	}
-
-	@Test(priority = 15, groups = {
 			"sanity" }, description = "On the \"Discharge Summary\" page of Profile \"Sonia Gandhi\", verify that the \"Save\" button is present or not?\r\n"
 					+ "If present, then click on the save button directly without fill any information and it will throw a notification popup error message.\r\n"
 					+ "Then validate that  notification popup error message \r\n" + "Failed\r\n"
@@ -252,6 +238,19 @@ public class doctor_testcase extends AppTestBase {
 		Assert.assertTrue(locatorsFactoryInstance.popupErrorMessageIsPresent(driver).isDisplayed(),
 				"Error message is not present in the current page, Please check manually");
 	}
+	
+	@Test(priority = 15, groups = {
+	"sanity" }, description = "On the  \"Scanned Images\" Module of Profile \"Sonia Gandhi's\",\r\n"
+			+ "Upload a image in Scanned Images module.")
+	public void uploadImageInScannedImagesSection() throws Exception {
+		doctor_PagesInstance = new doctor_Pages(driver);
+		locatorsFactoryInstance = new LocatorsFactory(driver);
+		Assert.assertTrue(
+		doctor_PagesInstance.handleFileUpload(System.getProperty("user.dir") + "\\testImage\\uploadImage.png"),
+		"Not able to upload the image, please check manually");
+		Assert.assertTrue(locatorsFactoryInstance.verifyUploadButtonIsPresent(driver).isDisplayed(),
+		"upload button is not present in the current page, Please check manually");
+}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {

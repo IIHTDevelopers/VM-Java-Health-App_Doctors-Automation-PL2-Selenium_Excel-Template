@@ -193,44 +193,5 @@ public class doctor_Pages extends StartupPage {
 		return null;
 	}
 
-	/**@Test13
-	 * about this method verifyThatTheYesRadioButtonIsSelectedAndDeselect() 
-	 * @param : null
-	 * @description : On the "Discharge Summary" page, select "Yes" radio button from the "Show Result on Report" label and then verify that the "Yes" radio button is selected or not.
-                      After validation, then deselect the "Yes" radio button from the "Show Result on Report" label 
-	 * @return : Boolean
-	 * @author : Yaksha
-	 */
-	public Boolean verifyThatTheYesRadioButtonIsSelectedAndDeselect() throws Exception {
-		return false;
-	}
-
-	/**@Test14
-	 * about this method verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() 
-	 * @param : null
-	 * @description : On the "Discharge Summary" page, verify that the "Update" button is present or not?
-                      If present, then click on the Update button directly without fill any information and it will throw a notification popup error message.
-                      Then validate that  notification popup error message 
-                      Failed
-                      Enter Mandatory fields
-	 * @return : String
-	 * @author : Yaksha
-	 */
-	public String verifyTheNotificationPopupErrorMessageAfterClickOnSaveButton() throws Exception {
-		return null;
-	}
-	
-	/**@Test15
-	 * about this method handleFileUpload() 
-	 * @param : Map<String, String>
-	 * @description : Upload a image in Scanned Images section.
-	 * @return : Boolean
-	 * @author : YAKSHA
-	 */
-	public Boolean handleFileUpload(String pathOfTheFile) throws Exception {
-		
-		return false;
-	}
-
 	
 }
